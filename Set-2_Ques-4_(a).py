@@ -6,6 +6,9 @@ print("Dataset loaded:\n", df.head())
 missing_values = df[['Quantity', 'UnitPrice']].isnull().sum()
 print("Checking for missing values:\n", missing_values)
 
+# I have used df[['Quantity', 'UnitPrice']].isnull().sum() to check for missing values and 
+# it will return the number of missing (NaN) values in each column
+
 df['Quantity'].fillna(df['Quantity'].median(), inplace=True)
 df['UnitPrice'].fillna(df['UnitPrice'].median(), inplace=True)
 
